@@ -2,7 +2,7 @@
   "name"              : "単語",
   "short_name"        : "単語",
   "description"       : "単語",
-  "start_url"         : "/?pwa=1",
+  "start_url"         : "/",
   "display"           : "standalone",
   "background_color"  : "#000000",
   "theme_color"       : "#000000",
