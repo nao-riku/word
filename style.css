@@ -100,7 +100,7 @@
   display: -ms-flexbox;
   display: flex;
   padding-top: 4px;
-  padding-bottom: 8px;
+  padding-bottom: 30px;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
