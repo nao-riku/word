@@ -6,6 +6,7 @@
         <link rel="manifest" href="manifest.json">
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
         <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
@@ -15,6 +16,15 @@
 	            navigator.serviceWorker.register('service-worker.js').then(function(){
 		            console.log("Service Worker is registered!!");
 	            });
+            }
+
+            function handle(event) {
+                    event.preventDefault();
+            }
+
+            window.onload = function() {
+                    document.addEventListener('touchmove', handle, { passive: false });
+                    document.addEventListener('mousewheel', handle, { passive: false });
             }
         </script>
     </head>
