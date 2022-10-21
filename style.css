@@ -1,4 +1,4 @@
-/* Generated on: Fri Oct 21 2022 19:43:59 GMT+0000 (Coordinated Universal Time) */
+/* Generated on: Fri Oct 21 2022 19:47:43 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
    ========================================================================== */
@@ -525,7 +525,7 @@
     justify-content: center;
     background-color: #fff;
     color: #000;
-    font-size: 5px;
+    font-size: 100%;
     line-height: 5px;
     text-align: center;
   }
