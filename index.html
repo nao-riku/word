@@ -10,6 +10,13 @@
         <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
         <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
         <link href="https://uploads-ssl.webflow.com/img/webclip.png" rel="apple-touch-icon"/>
+        <script>
+            if('serviceWorker' in navigator){
+	            navigator.serviceWorker.register('/serviceworker.js').then(function(){
+		            console.log("Service Worker is registered!!");
+	            });
+            }
+        </script>
     </head>
     <body class="body">
         <div class="div-block">
