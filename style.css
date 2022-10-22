@@ -1,4 +1,4 @@
-/* Generated on: Sat Oct 22 2022 14:01:03 GMT+0000 (Coordinated Universal Time) */
+/* Generated on: Sat Oct 22 2022 14:06:26 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
    ========================================================================== */
@@ -209,7 +209,7 @@
      padding-top: 6px;
      padding-bottom: 6px;
      border-bottom: 1px none #fff;
-     color: #fff;
+     color: #000;
      font-size: 18px;
      text-align: center;
    }
@@ -222,6 +222,10 @@
      -webkit-justify-content: space-around;
      -ms-flex-pack: distribute;
      justify-content: space-around;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -ms-flex-align: center;
+     align-items: center;
      border-bottom: 1px solid #fff;
    }
    
@@ -230,13 +234,17 @@
      display: -webkit-flex;
      display: -ms-flexbox;
      display: flex;
-     height: 20px;
-     margin-bottom: 10px;
+     height: 25px;
+     margin-bottom: 0px;
      -webkit-box-align: center;
      -webkit-align-items: center;
      -ms-flex-align: center;
      align-items: center;
      background-color: #fff;
+     background-image: url("repeat.png");
+     background-position: 50% 50%;
+     background-size: 25px;
+     background-repeat: no-repeat;
      color: #000;
      text-align: center;
    }
