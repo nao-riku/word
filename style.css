@@ -1,4 +1,4 @@
-/* Generated on: Sat Oct 22 2022 14:06:26 GMT+0000 (Coordinated Universal Time) */
+/* Generated on: Sat Oct 22 2022 14:09:57 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
    ========================================================================== */
@@ -14,7 +14,7 @@
       ========================================================================== */
    .text-block {
      position: fixed;
-     top: 32%;
+     top: 30%;
      width: 100%;
      font-size: 23px;
      line-height: 30px;
@@ -295,7 +295,7 @@
    
      .text-block {
        position: fixed;
-       top: 31%;
+       top: 28%;
        display: block;
        width: 80%;
        height: auto;
@@ -317,7 +317,7 @@
    
      .text-block-2 {
        position: fixed;
-       top: 49%;
+       top: 47%;
        width: 80%;
        margin-top: 0px;
        font-size: 23px;
