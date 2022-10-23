@@ -2,6 +2,16 @@ var dbName = 'sampleDB';
 var dbVersion = '1';
 var storeName  = 'counts';
 var count = 0;
+  
+var request = indexedDB.deleteDatabase(dbName); // データベース名(testDB)に接続
+
+request.onsuccess = function(event){
+    console.log('DBの削除に成功しました'); 
+}
+request.onerror = function(){
+    console.log('DBの削除に失敗しました');
+}
+
 //　DB名を指定して接続
 var openReq  = indexedDB.open(dbName, dbVersion);
 // 接続に失敗
