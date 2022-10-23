@@ -52,7 +52,10 @@ openReq.onsuccess = function (event) {
 
             for (var i = 0; i < 3000; i++) {
                 var name = "data" + i;
-                store.put({name : Math.random()});
+                store.put({
+                    id: 1,
+                    name: Math.random()
+                });   
             }
         }
     }
