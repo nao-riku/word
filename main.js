@@ -25,10 +25,6 @@ openReq.onupgradeneeded = function (event) {
     const objectStore = db.createObjectStore(storeName, {keyPath : 'id'})
     objectStore.createIndex("id", "id", { unique: true });
     objectStore.createIndex("cnt", "cnt", { unique: false });
-    for (var i = 0; i < 3000; i++) {
-        var name = "data" + i;
-        objectStore.createIndex(name, name, { unique: false });
-    }
 
     console.log('DB更新');
 }
@@ -55,16 +51,16 @@ openReq.onsuccess = function (event) {
         var putReq = store.put({
             id: 1,
             cnt: count
-        });    
+        });
 
         putReq.onsuccess = function (event) {
             console.log('更新成功');
 
-            for (var i = 0; i < 3000; i++) {
-                var obj = {};
-                obj["id"] = 1;
-                obj["data" + i] = Math.random();
-                store.put(obj);   
+            for (var i = 2; i < 3000; i++) {
+                store.put({
+                    id: i,
+                    cnt: Math.random()
+                }); 
             }
         }
     }
