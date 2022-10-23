@@ -49,4 +49,52 @@ openReq.onsuccess = function (event) {
             console.log('更新成功');
         }
     }
+    
+    document.getElementsByClassName("w-button")[2].addEventListener('click', function () {
+        count++;
+        var putReq = updateDb(db, storeName, count);
+
+        putReq.onsuccess = function (event) {
+            console.log('更新成功');
+            document.getElementById('countDisplay').innerHTML = count;
+        }
+        putReq.onerror = function (event) {
+            console.log('更新失敗');
+        }
+    });
+    
+    document.getElementsByClassName("w-button")[3].addEventListener('click', function () {
+        count--;
+        var putReq = updateDb(db, storeName, count);
+
+        putReq.onsuccess = function (event) {
+            console.log('更新成功');
+            document.getElementById('countDisplay').innerHTML = count;
+        }
+        putReq.onerror = function (event) {
+            console.log('更新失敗');
+        }
+    });
+    
+    document.getElementsByClassName("w-button")[4].addEventListener('click', function () {
+        count = 0;
+        var putReq = updateDb(db, storeName, count);
+
+        putReq.onsuccess = function (event) {
+            console.log('更新成功');
+            document.getElementById('countDisplay').innerHTML = count;
+        }
+        putReq.onerror = function (event) {
+            console.log('更新失敗');
+        }
+    });
+}
+
+function updateDb (db, store_name, cnt) {
+    var trans = db.transaction(store_name, "readwrite");
+    var store = trans.objectStore(store_name);
+    return store.put({
+        id: 1,
+        cnt: cnt
+    });
 }
