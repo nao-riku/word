@@ -17,7 +17,7 @@ openReq.onupgradeneeded = function (event) {
     objectStore.createIndex("cnt", "cnt", { unique: false });
     for (var i = 0; i < 3000; i++) {
         var name = "data" + i;
-        objectStore.createIndex(name, name, { unique: true });
+        objectStore.createIndex(name, name, { unique: false });
     }
 
     console.log('DB更新');
