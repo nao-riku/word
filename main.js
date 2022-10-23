@@ -61,11 +61,10 @@ openReq.onsuccess = function (event) {
             console.log('更新成功');
 
             for (var i = 0; i < 3000; i++) {
-                var name = "data" + i;
-                store.put({
-                    id: 1,
-                    name: "１２３４５６7890"
-                });   
+                var obj = {};
+                obj["id"] = 1;
+                obj["data" + i] = Math.random();
+                store.put(obj);   
             }
         }
     }
