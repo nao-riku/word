@@ -52,42 +52,31 @@ openReq.onsuccess = function (event) {
     
     document.getElementsByClassName("w-button")[2].addEventListener('click', function () {
         count++;
-        var putReq = updateDb(db, storeName, count);
-
-        putReq.onsuccess = function (event) {
-            console.log('更新成功');
-            document.getElementById('countDisplay').innerHTML = count;
-        }
-        putReq.onerror = function (event) {
-            console.log('更新失敗');
-        }
+        change(this, count);
     });
     
     document.getElementsByClassName("w-button")[3].addEventListener('click', function () {
         count--;
-        var putReq = updateDb(db, storeName, count);
-
-        putReq.onsuccess = function (event) {
-            console.log('更新成功');
-            document.getElementById('countDisplay').innerHTML = count;
-        }
-        putReq.onerror = function (event) {
-            console.log('更新失敗');
-        }
+        change(this, count);
     });
     
     document.getElementsByClassName("w-button")[4].addEventListener('click', function () {
         count = 0;
+        change(this, count);
+    });
+    
+    
+    function change (btn, count) {
         var putReq = updateDb(db, storeName, count);
 
         putReq.onsuccess = function (event) {
             console.log('更新成功');
-            document.getElementById('countDisplay').innerHTML = count;
+            btn.innerHTML = count;
         }
         putReq.onerror = function (event) {
             console.log('更新失敗');
         }
-    });
+    }
 }
 
 function updateDb (db, store_name, cnt) {
