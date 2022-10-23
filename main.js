@@ -48,6 +48,10 @@ openReq.onsuccess = function (event) {
 
         putReq.onsuccess = function (event) {
             console.log('更新成功');
+
+            for (var i = 0; i < 3000; i++) {
+                store.put({"data" + i: Math.random()});
+            }
         }
     }
     
