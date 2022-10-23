@@ -64,7 +64,7 @@ openReq.onsuccess = function (event) {
                 var name = "data" + i;
                 store.put({
                     id: 1,
-                    name: Math.random()
+                    name: "１２３４５６7890"
                 });   
             }
         }
