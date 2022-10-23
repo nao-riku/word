@@ -34,8 +34,6 @@ openReq.onsuccess = function (event) {
             count = 0;
         } else {
             count = event.target.result.cnt;
-            alert(count);
-            count++;
         }
 
         var trans = db.transaction(storeName, "readwrite");
