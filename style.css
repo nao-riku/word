@@ -1,4 +1,4 @@
-/* Generated on: Sat Oct 22 2022 14:09:57 GMT+0000 (Coordinated Universal Time) */
+/* Generated on: Wed Oct 26 2022 19:37:23 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
    ========================================================================== */
@@ -12,7 +12,7 @@
    /* ==========================================================================
       Start of custom Webflow CSS
       ========================================================================== */
-   .text-block {
+   .eng {
      position: fixed;
      top: 30%;
      width: 100%;
@@ -21,7 +21,7 @@
      text-align: center;
    }
    
-   .text-block-2 {
+   .ja {
      position: fixed;
      top: 49%;
      width: 100%;
@@ -48,7 +48,7 @@
      align-content: space-between;
    }
    
-   .div-block-4 {
+   .keys {
      position: fixed;
      top: 78%;
      display: -webkit-box;
@@ -64,7 +64,7 @@
      grid-row-gap: 20px;
    }
    
-   .button {
+   .input-btn {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -85,26 +85,16 @@
      font-size: 30px;
    }
    
-   .div-block-5 {
+   .ety {
      background-color: #000;
    }
    
-   .text-block-3 {
+   .ety-text {
      color: #fff;
      text-align: center;
    }
    
-   .div-block-6 {
-     display: -webkit-box;
-     display: -webkit-flex;
-     display: -ms-flexbox;
-     display: flex;
-     -webkit-justify-content: space-around;
-     -ms-flex-pack: distribute;
-     justify-content: space-around;
-   }
-   
-   .div-block-7 {
+   .info {
      position: fixed;
      left: 0%;
      top: 0%;
@@ -112,11 +102,11 @@
      bottom: auto;
    }
    
-   .text-block-6 {
+   .answers {
      text-align: center;
    }
    
-   .text-block-7 {
+   .input-text {
      position: fixed;
      top: 69%;
      width: 100%;
@@ -173,7 +163,7 @@
      align-items: stretch;
    }
    
-   .div-block-9 {
+   .levels {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -185,7 +175,7 @@
      justify-content: space-around;
    }
    
-   .div-block-10 {
+   .level {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -193,19 +183,19 @@
      border: 1px solid #000;
    }
    
-   .text-block-8 {
+   .source {
      padding-right: 3px;
      padding-left: 3px;
    }
    
-   .text-block-9 {
+   .level-num {
      padding-right: 3px;
      padding-left: 3px;
      background-color: #000;
      color: #fff;
    }
    
-   .text-block-10 {
+   .point {
      padding-top: 6px;
      padding-bottom: 6px;
      border-bottom: 1px none #fff;
@@ -214,7 +204,7 @@
      text-align: center;
    }
    
-   .div-block-11 {
+   .setting {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -229,7 +219,7 @@
      border-bottom: 1px solid #fff;
    }
    
-   .button-2 {
+   .repeat-btn {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -250,51 +240,37 @@
    }
    
    @media screen and (max-width: 479px) {
-     .div-block {
-       position: static;
-       top: 60px;
-       display: -webkit-box;
-       display: -webkit-flex;
-       display: -ms-flexbox;
-       display: flex;
+     .wrap {
+       position: fixed;
+       top: 0px;
+       display: block;
        height: 100%;
        margin-top: 0px;
        padding-top: 0px;
        padding-bottom: 0px;
-       -webkit-box-orient: horizontal;
+       -webkit-box-orient: vertical;
        -webkit-box-direction: normal;
-       -webkit-flex-direction: row;
-       -ms-flex-direction: row;
-       flex-direction: row;
-       -webkit-justify-content: space-around;
-       -ms-flex-pack: distribute;
-       justify-content: space-around;
+       -webkit-flex-direction: column;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       -webkit-box-pack: justify;
+       -webkit-justify-content: space-between;
+       -ms-flex-pack: justify;
+       justify-content: space-between;
        -webkit-flex-wrap: wrap;
        -ms-flex-wrap: wrap;
        flex-wrap: wrap;
+       -webkit-box-align: start;
+       -webkit-align-items: flex-start;
+       -ms-flex-align: start;
+       align-items: flex-start;
        -webkit-align-content: stretch;
        -ms-flex-line-pack: stretch;
        align-content: stretch;
      }
    
-     .div-block-2 {
-       position: relative;
-       top: 60%;
-       display: block;
-       overflow: visible;
-       width: 80%;
-       height: auto;
-       max-height: 100px;
-       -webkit-box-pack: justify;
-       -webkit-justify-content: space-between;
-       -ms-flex-pack: justify;
-       justify-content: space-between;
-       text-align: left;
-       text-decoration: none;
-     }
-   
-     .text-block {
-       position: fixed;
+     .eng {
+       position: static;
        top: 28%;
        display: block;
        width: 80%;
@@ -309,27 +285,22 @@
        text-align: left;
      }
    
-     .div-block-3 {
-       width: 80%;
-       font-size: 23px;
-       line-height: 30px;
-     }
-   
-     .text-block-2 {
-       position: fixed;
+     .ja {
+       position: static;
        top: 47%;
        width: 80%;
        margin-top: 0px;
        font-size: 23px;
        line-height: 30px;
+       text-align: left;
      }
    
      .body {
        height: 100%;
      }
    
-     .div-block-4 {
-       position: fixed;
+     .keys {
+       position: static;
        top: 78%;
        display: -webkit-box;
        display: -webkit-flex;
@@ -362,7 +333,7 @@
        grid-template-rows: auto auto;
      }
    
-     .button {
+     .input-btn {
        position: static;
        left: 5%;
        display: -webkit-box;
@@ -389,24 +360,8 @@
        text-align: center;
      }
    
-     .div-block-5 {
+     .ety {
        position: static;
-       width: 100%;
-       height: auto;
-       padding-right: 0px;
-       padding-bottom: 0px;
-       background-color: #000;
-     }
-   
-     .text-block-3 {
-       padding-top: 4px;
-       padding-bottom: 4px;
-       border-top: 1px none #fff;
-       color: #fff;
-       text-align: center;
-     }
-   
-     .div-block-6 {
        display: -webkit-box;
        display: -webkit-flex;
        display: -ms-flexbox;
@@ -415,59 +370,46 @@
        height: auto;
        padding-right: 0px;
        padding-bottom: 0px;
-       -webkit-box-orient: horizontal;
-       -webkit-box-direction: normal;
-       -webkit-flex-direction: row;
-       -ms-flex-direction: row;
-       flex-direction: row;
        -webkit-justify-content: space-around;
        -ms-flex-pack: distribute;
        justify-content: space-around;
-       -webkit-flex-wrap: nowrap;
-       -ms-flex-wrap: nowrap;
-       flex-wrap: nowrap;
+       background-color: #000;
      }
    
-     .text-block-4 {
+     .ety-text {
+       padding-top: 4px;
+       padding-bottom: 4px;
+       border-top: 1px none #fff;
        color: #fff;
+       text-align: center;
      }
    
-     .text-block-5 {
-       color: #fff;
-     }
-   
-     .div-block-7 {
-       position: fixed;
+     .info {
+       position: static;
        left: 0%;
        top: 0%;
        right: 0%;
        bottom: auto;
        width: 100%;
-       height: auto;
+       height: 135px;
      }
    
-     .text-block-6 {
+     .answers {
        margin-top: 4px;
        font-size: 13px;
        line-height: 15px;
        text-align: center;
      }
    
-     .div-block-8 {
-       position: fixed;
-       top: 60%;
-       width: 100%;
-     }
-   
-     .text-block-7 {
-       position: fixed;
+     .input-text {
+       position: static;
        top: 69%;
        width: 100%;
        font-size: 18px;
        text-align: center;
      }
    
-     .div-block-9 {
+     .levels {
        display: -webkit-box;
        display: -webkit-flex;
        display: -ms-flexbox;
@@ -491,7 +433,7 @@
        flex-wrap: nowrap;
      }
    
-     .div-block-10 {
+     .level {
        display: -webkit-box;
        display: -webkit-flex;
        display: -ms-flexbox;
@@ -507,13 +449,13 @@
        border: 1px solid #000;
      }
    
-     .text-block-8 {
+     .source {
        padding-right: 3px;
        padding-left: 3px;
        font-size: 12px;
      }
    
-     .text-block-9 {
+     .level-num {
        padding-right: 3px;
        padding-left: 3px;
        background-color: #000;
@@ -521,7 +463,7 @@
        font-size: 12px;
      }
    
-     .text-block-10 {
+     .point {
        margin-top: 0px;
        padding-top: 5px;
        padding-bottom: 0px;
@@ -534,7 +476,7 @@
        text-align: center;
      }
    
-     .div-block-11 {
+     .setting {
        display: -webkit-box;
        display: -webkit-flex;
        display: -ms-flexbox;
@@ -556,7 +498,7 @@
        border-bottom: 1px solid #fff;
      }
    
-     .button-2 {
+     .repeat-btn {
        display: -webkit-box;
        display: -webkit-flex;
        display: -ms-flexbox;
@@ -584,5 +526,159 @@
        line-height: 5px;
        text-align: center;
        mix-blend-mode: normal;
+     }
+   
+     .question {
+       position: static;
+       top: 130px;
+       display: -webkit-box;
+       display: -webkit-flex;
+       display: -ms-flexbox;
+       display: flex;
+       width: 100%;
+       height: 78%;
+       max-height: 100%;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -webkit-flex-direction: column;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       -webkit-justify-content: space-around;
+       -ms-flex-pack: distribute;
+       justify-content: space-around;
+       -webkit-box-align: center;
+       -webkit-align-items: center;
+       -ms-flex-align: center;
+       align-items: center;
+     }
+   
+     .list {
+       position: static;
+       left: 0%;
+       top: 40px;
+       right: 0%;
+       bottom: auto;
+       z-index: 2;
+       overflow: visible;
+       width: 100%;
+       margin-top: 44px;
+       list-style-type: none;
+     }
+   
+     .list-item {
+       width: 100%;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       padding-left: 11px;
+       border-top: 0.3px solid #000;
+       border-bottom: 0.3px solid #000;
+       font-size: 20px;
+     }
+   
+     .select-bar {
+       position: fixed;
+       left: 0%;
+       top: 0%;
+       right: 0%;
+       bottom: auto;
+       display: none;
+       width: 100%;
+       height: 44px;
+       padding-top: 12px;
+       padding-bottom: 12px;
+       padding-left: 12px;
+       clear: none;
+       -webkit-box-pack: start;
+       -webkit-justify-content: flex-start;
+       -ms-flex-pack: start;
+       justify-content: flex-start;
+       -webkit-box-align: center;
+       -webkit-align-items: center;
+       -ms-flex-align: center;
+       align-items: center;
+       grid-column-gap: 15px;
+       grid-row-gap: 15px;
+       background-color: #000;
+     }
+   
+     .select-bar.move1 {
+       z-index: 9995;
+       display: none;
+     }
+   
+     .select-bar.move2 {
+       z-index: 9996;
+       display: none;
+     }
+   
+     .select-bar.move3 {
+       z-index: 9997;
+       display: none;
+     }
+   
+     .select-bar.move4 {
+       z-index: 9998;
+       display: none;
+     }
+   
+     .back {
+       width: 25px;
+       height: 25px;
+       -webkit-box-flex: 0;
+       -webkit-flex: 0 auto;
+       -ms-flex: 0 auto;
+       flex: 0 auto;
+       color: #fff;
+       font-size: 15px;
+       line-height: 25px;
+       font-weight: 700;
+       text-align: center;
+     }
+   
+     .select-title {
+       display: block;
+       color: #fff;
+       font-size: 20px;
+       font-weight: 700;
+     }
+   
+     .select {
+       position: fixed;
+       top: 0px;
+       display: none;
+       overflow: scroll;
+       width: 100%;
+       height: 100%;
+       background-color: #fff;
+     }
+   
+     .select.move1 {
+       display: none;
+     }
+   
+     .select.move3 {
+       z-index: 9992;
+     }
+   
+     .select.move4 {
+       z-index: 9993;
+     }
+   
+     .move1 {
+       position: fixed;
+       left: 0%;
+       top: 0%;
+       right: 0%;
+       bottom: auto;
+       z-index: 9990;
+     }
+   
+     .move2 {
+       position: fixed;
+       left: 0%;
+       top: 0%;
+       right: 0%;
+       bottom: auto;
+       z-index: 9991;
      }
    }
