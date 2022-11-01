@@ -50,7 +50,7 @@ function go_out_2(a, b) {
 
 function go_out_3() {
     let divs = document.querySelectorAll(".move5");
-    divs.forEach(div => div.style.top = "100%");
+    divs.forEach(div => div.style.top = "101%");
 }
 
 
