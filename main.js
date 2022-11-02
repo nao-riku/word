@@ -1,5 +1,4 @@
 window.onload = function () {
-    resize();
     add_onclick("move1", "move2");
     add_onclick("move2", "move3");
     add_onclick("move3", "move4");
@@ -9,6 +8,8 @@ window.onresize = resize;
 function resize() {
     document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 135) + "px";
 }
+
+resize();
 
 function add_onclick(a, b) {
     let items = document.getElementsByClassName("select " + a)[0].children[0].children;
