@@ -10,6 +10,7 @@ function resize() {
     document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 200) + "px";
     document.getElementsByClassName("eng")[1].innerHTML = "now width is " + document.documentElement.clientWidth;
     document.body.style.width = document.documentElement.clientWidth + "px";
+    document.getElementsByClassName("wrap")[0].style.width = document.documentElement.clientWidth + "px";
 }
 
 function add_onclick(a, b) {
