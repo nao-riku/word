@@ -10,6 +10,45 @@ window.onload = function () {
     add_onclick("move1", "move2");
     add_onclick("move2", "move3");
     add_onclick("move3", "move4");
+
+    change_btn(document.getElementsByClassName("input-text")[0]);
+
+    for (let i = 2; i <= 4; i++) {
+        document.getElementsByClassName("w-button")[i].addEventListener('click', function () {
+            answer(this);
+        });
+    }
+}
+
+let kana = ['あ', 'い', 'う', 'え', 'お', 'か', 'く', 'け', 'こ', 'さ', 'す', 'せ', 'そ', 'た', 'つ', 'て', 'と', 'な', 'ぬ', 'ね', 'の', 'は', 'ふ', 'へ', 'ほ', 'ま', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'る', 'れ', 'ろ', 'わ', 'が', 'ぐ', 'げ', 'ご', 'ざ', 'ず', 'ぜ', 'ぞ', 'だ', 'ぢ', 'づ', 'で', 'ど', 'ば', 'ぶ', 'べ', 'ぼ', 'ぱ', 'ぷ', 'ぺ', 'ぽ'];
+let kana2 = ['き', 'し', 'ち', 'に', 'ひ', 'み', 'り', 'ぎ', 'じ', 'び', 'ぴ']
+let mini = ['ゃ', 'ゅ', 'ょ']
+
+function answer(btn) {
+    let answer = document.getElementsByClassName("input-text")[0];
+    if (answer.innerText.length == 2) {
+        answer.innerText = answer.innerText + btn.innerText;
+        change_btn(answer);
+
+    } else {
+        answer.innerText = answer.innerText + btn.innerText;
+        change_btn(answer);
+    }
+}
+
+function change_btn(answer) {
+    let list = kana.concat(kana2);
+    if (answer.innerText.length >= 1) {
+        if (answer.innerText[answer.innerText.length - 1] !== 'っ') list.concat(['っ']);
+        if (answer.innerText[answer.innerText.length - 1] !== 'ん') list.concat(['ん']);
+        if (kana2.includes(answer.innerText[answer.innerText.length - 1])) list.concat(mini);
+    }
+    for (let i = 2; i <= 4; i++) {
+        let num = Math.floor(Math.random() * list.length)
+        let cha = list[num];
+        document.getElementsByClassName("w-button")[i].innerText = cha;
+        list.splice(num, 1);
+    }
 }
 
 window.onresize = function () {
@@ -70,9 +109,9 @@ function go_out_3() {
 
 var dbName = 'sampleDB';
 var dbVersion = '1';
-var storeName  = 'counts';
+var storeName = 'counts';
 var count = 0;
-  
+
 /*var request = indexedDB.deleteDatabase(dbName); // データベース名(testDB)に接続
 
 request.onsuccess = function(event){
@@ -83,7 +122,7 @@ request.onerror = function(){
 }*/
 
 //　DB名を指定して接続
-var openReq  = indexedDB.open(dbName, dbVersion);
+var openReq = indexedDB.open(dbName, dbVersion);
 // 接続に失敗
 openReq.onerror = function (event) {
     console.log('接続失敗');
@@ -92,7 +131,7 @@ openReq.onerror = function (event) {
 //DBのバージョン更新(DBの新規作成も含む)時のみ実行
 openReq.onupgradeneeded = function (event) {
     var db = event.target.result;
-    const objectStore = db.createObjectStore(storeName, {keyPath : 'id'})
+    const objectStore = db.createObjectStore(storeName, { keyPath: 'id' })
     objectStore.createIndex("id", "id", { unique: true });
     objectStore.createIndex("cnt", "cnt", { unique: false });
 
@@ -130,11 +169,11 @@ openReq.onsuccess = function (event) {
                 store.put({
                     id: i,
                     cnt: Math.random()
-                }); 
+                });
             }
         }
     }
-    
+    /*
     document.getElementsByClassName("w-button")[2].addEventListener('click', function () {
         count++;
         change(this, count);
@@ -148,10 +187,10 @@ openReq.onsuccess = function (event) {
     document.getElementsByClassName("w-button")[4].addEventListener('click', function () {
         count = 0;
         change(this, count);
-    });
-    
-    
-    function change (btn, count) {
+    });*/
+
+
+    function change(btn, count) {
         var putReq = updateDb(db, storeName, count);
 
         putReq.onsuccess = function (event) {
@@ -164,7 +203,7 @@ openReq.onsuccess = function (event) {
     }
 }
 
-function updateDb (db, store_name, cnt) {
+function updateDb(db, store_name, cnt) {
     var trans = db.transaction(store_name, "readwrite");
     var store = trans.objectStore(store_name);
     return store.put({
@@ -172,3 +211,7 @@ function updateDb (db, store_name, cnt) {
         cnt: cnt
     });
 }
+
+
+
+

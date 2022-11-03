@@ -67,6 +67,7 @@ body {
 }
 
 .input-text {
+  height: 60px;
   font-size: 18px;
   text-align: center;
   padding-bottom: 40px;
