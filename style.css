@@ -145,17 +145,14 @@ table {
   border-collapse: collapse;
 }
 
-table tr {
-  border-top: 0.2px solid #000;
-  border-bottom: 0.2px solid #000;
-}
-
 .li-name {
   font-size: 20px;
   height: 42px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 11px;
+  border-top: 0.2px solid #000;
+  border-bottom: 0.2px solid #000;
 }
 
 .select-bar {
