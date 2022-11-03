@@ -61,8 +61,8 @@ body {
 
 .answers {
   margin-top: 4px;
-  font-size: 13px !important;
-  line-height: 15px !important;
+  font-size: 13px;
+  height: 15px;
   text-align: center;
 }
 

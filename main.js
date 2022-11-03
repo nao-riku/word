@@ -4,12 +4,12 @@ window.onload = function () {
     add_onclick("move2", "move3");
     add_onclick("move3", "move4");
 }
-//window.onresize = resize;
+window.onresize = resize;
 
 function resize() {
-    document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 200) + "px";
+    //document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 200) + "px";
     document.getElementsByClassName("eng")[1].innerHTML = "now width is " + document.documentElement.clientWidth;
-    document.body.style.width = document.documentElement.clientWidth + "px";
+    //document.body.style.width = document.documentElement.clientWidth + "px";
 }
 
 function add_onclick(a, b) {
