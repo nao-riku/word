@@ -7,7 +7,7 @@ window.onload = function () {
 window.onresize = resize;
 
 function resize() {
-    document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 135) + "px";
+    document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 160) + "px";
 }
 
 function add_onclick(a, b) {
