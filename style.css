@@ -145,14 +145,21 @@ table {
   border-spacing: 0px;
 }
 
-.li-name {
-  font-size: 20px;
+table td {
   height: 42px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 11px;
   border-top: 0.2px solid #000;
   border-bottom: 0.2px solid #000;
+}
+
+.li-num {
+  width: 40px;
+  padding-left: 17px;
+}
+
+.li-name {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .select-bar {
