@@ -13,7 +13,9 @@ window.onload = function () {
 }
 
 window.onresize = function () {
-    document.getElementsByClassName("wrap")[0].style.width = document.documentElement.clientWidth + "px";
+    let size = document.documentElement.clientWidth + "px"
+    document.getElementsByClassName("wrap")[0].style.width = size;
+    document.querySelectorAll("table").forEach(item => item.style.width = size);
 }
 
 function add_onclick(a, b) {
