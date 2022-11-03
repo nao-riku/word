@@ -2,7 +2,7 @@
   "name"              : "単語",
   "short_name"        : "単語",
   "description"       : "単語",
-  "start_url"         : "https://nao-riku.github.io/word",
+  "start_url"         : "/word",
   "display"           : "standalone",
   "background_color"  : "#000000",
   "theme_color"       : "#000000",
