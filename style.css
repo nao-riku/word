@@ -138,20 +138,24 @@ body {
   align-items: center;
 }
 
-.list {
+table {
   width: 100%;
   margin-top: 44px;
-  padding-left: 0;
+  height: max-content;
+  border-collapse: collapse;
 }
 
-.list-item {
+table tr {
+  border-top: 0.2px solid #000;
+  border-bottom: 0.2px solid #000;
+  font-size: 20px;
+}
+
+.li-name {
   height: 42px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 11px;
-  border-top: 0.2px solid #000;
-  border-bottom: 0.2px solid #000;
-  font-size: 20px;
 }
 
 .select-bar {

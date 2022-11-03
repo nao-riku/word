@@ -17,9 +17,9 @@ window.onresize = function () {
 }
 
 function add_onclick(a, b) {
-    let items = document.getElementsByClassName("select " + a)[0].children[0].children;
+    let items = document.getElementsByClassName("select " + a)[0].children[0].children[0].children;
     for (let i = 0; i < items.length; i++) {
-        items[i].setAttribute('onclick', "show_up_2('." + a + "', '." + b + "')");
+        items[i].children[0].setAttribute('onclick', "show_up_2('." + a + "', '." + b + "')");
     }
 }
 

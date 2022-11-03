@@ -1,168 +1,179 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>単語</title>
-        <meta content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no" name="viewport"/>
-        <meta name="theme-color" content="white"/>
-        <link rel="manifest" href="manifest.json" />
-        <link href="style.css" rel="stylesheet" type="text/css"/>
-        <script src="main.js" type="text/javascript"></script>
-        <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-        <link href="https://uploads-ssl.webflow.com/img/webclip.png" rel="apple-touch-icon"/>
-    </head>
-    <body st="" class="body">
-        <div class="wrap">
+
+<head>
+    <meta charset="utf-8" />
+    <title>単語</title>
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="theme-color" content="white" />
+    <link rel="manifest" href="manifest.json" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="main.js" type="text/javascript"></script>
+    <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://uploads-ssl.webflow.com/img/webclip.png" rel="apple-touch-icon" />
+</head>
+
+<body st="" class="body">
+    <div class="wrap">
+        <div>
+            <div class="setting">
+                <div class="point" onclick="show_up_3()">13203</div>
+                <a href="#" class="repeat-btn w-button"></a>
+                <a href="#" class="repeat-btn w-button"></a>
+            </div>
+            <div class="ety" onclick="show_up_1()">
+                <div class="ety-text">J 治める　＞</div>
+                <div class="ety-text">27 命令・統治　＞</div>
+                <div class="ety-text">ban</div>
+                <div class="ety-text">禁止する</div>
+            </div>
+            <div class="levels">
+                <div class="level">
+                    <div class="source">シス単</div>
+                    <div class="level-num">1300</div>
+                </div>
+                <div class="level">
+                    <div class="source">東進</div>
+                    <div class="level-num">13</div>
+                </div>
+                <div class="level">
+                    <div class="source">英検</div>
+                    <div class="level-num">準2</div>
+                </div>
+            </div>
+            <div class="answers">
+                ○○○×××<br />
+            </div>
+            <div class="answers">
+                ○○○×××<br />
+            </div>
+        </div>
+        <div class="question">
+            <div class="eng">They abandoned the hill to enemy forces They abandoned the hill to enemy forces.</div>
+            <div class="eng">彼らはその丘を敵軍に明け渡した彼らはその丘を敵軍に明け渡した。</div>
             <div>
-                <div class="setting">
-                    <div class="point" onclick="show_up_3()">13203</div>
-                    <a href="#" class="repeat-btn w-button"></a>
-                    <a href="#" class="repeat-btn w-button"></a>
-                </div>
-                <div class="ety" onclick="show_up_1()">
-                    <div class="ety-text">J 治める　＞</div>
-                    <div class="ety-text">27 命令・統治　＞</div>
-                    <div class="ety-text">ban</div>
-                    <div class="ety-text">禁止する</div>
-                </div>
-                <div class="levels">
-                    <div class="level">
-                        <div class="source">シス単</div>
-                        <div class="level-num">1300</div>
-                    </div>
-                    <div class="level">
-                        <div class="source">東進</div>
-                        <div class="level-num">13</div>
-                    </div>
-                    <div class="level">
-                        <div class="source">英検</div>
-                        <div class="level-num">準2</div>
-                    </div>
-                </div>
-                <div class="answers">
-                    ○○○×××<br/>
-                </div>
-                <div class="answers">
-                    ○○○×××<br/>
-                </div>
-            </div>
-            <div class="question">
-                <div class="eng">They abandoned the hill to enemy forces They abandoned the hill to enemy forces.</div>
-                <div class="eng">彼らはその丘を敵軍に明け渡した彼らはその丘を敵軍に明け渡した。</div>
-                <div>
-                    <div class="input-text">あ</div>
-                    <div class="keys">
-                        <a href="#" class="input-btn w-button">あ</a>
-                        <a href="#" class="input-btn w-button">あ</a>
-                        <a href="#" class="input-btn w-button">あ</a>
-                    </div>
+                <div class="input-text">あ</div>
+                <div class="keys">
+                    <a href="#" class="input-btn w-button">あ</a>
+                    <a href="#" class="input-btn w-button">あ</a>
+                    <a href="#" class="input-btn w-button">あ</a>
                 </div>
             </div>
         </div>
-        <div class="select-bar move1">
-            <div class="back" onclick="go_out_1()">＜</div>
-            <div class="select-title">大ジャンル</div>
+    </div>
+    <div class="select-bar move1">
+        <div class="back" onclick="go_out_1()">＜</div>
+        <div class="select-title">大ジャンル</div>
+    </div>
+    <div class="select move1">
+        <table class="list">
+            <tbody>
+                <tr><td class="li-name">A　環境</td></tr>
+                <tr><td class="li-name">B　位置・方向・回転</td></tr>
+                <tr><td class="li-name">C　心</td></tr>
+                <tr><td class="li-name">D　時間</td></tr>
+                <tr><td class="li-name">E　形</td></tr>
+                <tr><td class="li-name">F　数</td></tr>
+                <tr><td class="li-name">G　存在・もの</td></tr>
+                <tr><td class="li-name">H　形容</td></tr>
+                <tr><td class="li-name">I　関係</td></tr>
+                <tr><td class="li-name">J　働きかける</td></tr>
+                <tr><td class="li-name">K　作用</td></tr>
+                <tr><td class="li-name">L　治める</td></tr>
+                <tr><td class="li-name">M　信じる</td></tr>
+                <tr><td class="li-name">N　移動</td></tr>
+                <tr><td class="li-name">O　get・keep</td></tr>
+                <tr><td class="li-name">P　見る・聞く</td></tr>
+                <tr><td class="li-name">Q　編む　　  </td></tr>
+                <tr><td class="li-name">R　その他の行動</td></tr>
+                <tr><td class="li-name">S　接尾辞</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="select-bar move2">
+        <div class="back" onclick="go_out_2('.move1', '.move2')">＜</div>
+        <div class="select-title">語源ジャンル</div>
+    </div>
+    <div class="select move2">
+        <table class="list">
+            <tbody>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="select-bar move3">
+        <div class="back" onclick="go_out_2('.move2', '.move3')">＜</div>
+        <div class="select-title">語源</div>
+    </div>
+    <div class="select move3">
+        <table class="list">
+            <tbody>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="select-bar move4">
+        <div class="back" onclick="go_out_2('.move3', '.move4')">＜</div>
+        <div class="select-title">単語</div>
+    </div>
+    <div class="select move4">
+        <table class="list">
+            <tbody>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+                <tr><td class="li-name">位置・方向</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="select-bar move5">
+        <div class="back" onclick="go_out_3()">
+            <strong>∨</strong>
         </div>
-        <div class="select move1">
-            <ul role="list" class="list w-list-unstyled">
-                <li class="list-item">A　環境</li>
-                <li class="list-item">B　位置・方向・回転</li>
-                <li class="list-item">C　心</li>
-                <li class="list-item">D　時間</li>
-                <li class="list-item">E　形</li>
-                <li class="list-item">F　数</li>
-                <li class="list-item">G　存在・もの</li>
-                <li class="list-item">H　形容</li>
-                <li class="list-item">I　関係</li>
-                <li class="list-item">J　働きかける</li>
-                <li class="list-item">K　作用</li>
-                <li class="list-item">L　治める</li>
-                <li class="list-item">M　信じる</li>
-                <li class="list-item">N　移動</li>
-                <li class="list-item">O　get・keep</li>
-                <li class="list-item">P　見る・聞く</li>
-                <li class="list-item">Q　編む　　  </li>
-                <li class="list-item">R　その他の行動</li>
-                <li class="list-item">S　接尾辞</li>
-            </ul>
-        </div>
-        <div class="select-bar move2">
-            <div class="back" onclick="go_out_2('.move1', '.move2')">＜</div>
-            <div class="select-title">語源ジャンル</div>
-        </div>
-        <div class="select move2">
-            <ul role="list" class="list w-list-unstyled">
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-            </ul>
-        </div>
-        <div class="select-bar move3">
-            <div class="back" onclick="go_out_2('.move2', '.move3')">＜</div>
-            <div class="select-title">語源</div>
-        </div>
-        <div class="select move3">
-            <ul role="list" class="list w-list-unstyled">
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-            </ul>
-        </div>
-        <div class="select-bar move4">
-            <div class="back" onclick="go_out_2('.move3', '.move4')">＜</div>
-            <div class="select-title">単語</div>
-        </div>
-        <div class="select move4">
-            <ul role="list" class="list w-list-unstyled">
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-                <li class="list-item">位置・方向</li>
-            </ul>
-        </div>
-        <div class="select-bar move5">
-            <div class="back" onclick="go_out_3()">
-                <strong>∨</strong>
-            </div>
-            <div class="select-title">JR最長片道切符の旅</div>
-        </div>
-        <div class="select move5"></div>
-    </body>
+        <div class="select-title">JR最長片道切符の旅</div>
+    </div>
+    <div class="select move5"></div>
+</body>
+
 </html>
