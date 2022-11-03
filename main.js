@@ -8,7 +8,7 @@ window.onresize = resize;
 
 function resize() {
     document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 200) + "px";
-    document.body.style.width = "100%";
+    document.body.style.width = document.documentElement.clientWidth + "px";
 }
 
 function add_onclick(a, b) {
