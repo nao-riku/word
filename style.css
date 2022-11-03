@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: white;
-  overscroll-behavior: contain;
+  overscroll-behavior: none;
 }
 
 .w-button {
@@ -68,6 +68,8 @@ body {
 
 .input-text {
   font-size: 18px;
+  text-align: center;
+  padding-bottom: 13px;
 }
 
 .levels {
@@ -129,9 +131,6 @@ body {
 }
 
 .question {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 80%;
   flex-direction: column;
