@@ -11,6 +11,7 @@ window.onload = function () {
     add_onclick("move2", "move3");
     add_onclick("move3", "move4");
 }
+
 window.onresize = function () {
     document.getElementsByClassName("wrap")[0].style.width = document.documentElement.clientWidth + "px";
 }
@@ -55,7 +56,7 @@ function go_out_2(a, b) {
 
 function go_out_3() {
     let divs = document.querySelectorAll(".move5");
-    divs.forEach(div => div.style.top = "101%");
+    divs.forEach(div => div.style.top = "100%");
 }
 
 
@@ -68,14 +69,14 @@ var dbVersion = '1';
 var storeName  = 'counts';
 var count = 0;
   
-var request = indexedDB.deleteDatabase(dbName); // データベース名(testDB)に接続
+/*var request = indexedDB.deleteDatabase(dbName); // データベース名(testDB)に接続
 
 request.onsuccess = function(event){
     console.log('DBの削除に成功しました'); 
 }
 request.onerror = function(){
     console.log('DBの削除に失敗しました');
-}
+}*/
 
 //　DB名を指定して接続
 var openReq  = indexedDB.open(dbName, dbVersion);
