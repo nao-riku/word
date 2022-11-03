@@ -21,7 +21,9 @@ window.onresize = function () {
 function add_onclick(a, b) {
     let items = document.getElementsByClassName("select " + a)[0].children[0].children[0].children;
     for (let i = 0; i < items.length; i++) {
-        items[i].children[0].setAttribute('onclick', "show_up_2('." + a + "', '." + b + "')");
+        for (let ii = 0; ii < 2; ii++) {
+            items[i].children[ii].setAttribute('onclick', "show_up_2('." + a + "', '." + b + "')");
+        }
     }
 }
 
