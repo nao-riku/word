@@ -186,7 +186,7 @@ body {
 }
 
 .select-bar.move5 {
-  z-index: 9999;
+  z-index: 9994;
 }
 
 .back {
@@ -234,7 +234,7 @@ body {
 }
 
 .select.move5 {
-  z-index: 9994;
+  z-index: 9989;
 }
 
 .move5 {
