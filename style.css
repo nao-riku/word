@@ -145,6 +145,7 @@ body {
 }
 
 .list-item {
+  height: 42px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 11px;
