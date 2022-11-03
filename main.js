@@ -1,14 +1,17 @@
 window.onload = function () {
-    //resize();
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("/service-worker.js")
+            .then(function (registration) {
+                console.log("serviceWorker registed.");
+            }).catch(function (error) {
+                console.warn("serviceWorker error.", error);
+            });
+    }
     add_onclick("move1", "move2");
     add_onclick("move2", "move3");
     add_onclick("move3", "move4");
 }
-window.onresize = resize;
-
-function resize() {
-    //document.getElementsByClassName("question")[0].style.height = (document.documentElement.clientHeight - 200) + "px";
-    //document.getElementsByClassName("eng")[1].innerHTML = "now width is " + document.documentElement.clientWidth;
+window.onresize = function () {
     document.getElementsByClassName("wrap")[0].style.width = document.documentElement.clientWidth + "px";
 }
 
