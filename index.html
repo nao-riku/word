@@ -8,6 +8,10 @@
     <meta name="theme-color" content="white" />
     <link rel="manifest" href="manifest.json" />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
+    <script src="stations.js" type="text/javascript"></script>
+    <script src="map.js" type="text/javascript"></script>
     <script src="main.js" type="text/javascript"></script>
     <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="https://uploads-ssl.webflow.com/img/webclip.png" rel="apple-touch-icon" />
@@ -16,164 +20,408 @@
 <body st="" class="body">
     <div class="wrap">
         <div>
-            <div class="setting">
-                <div class="point" onclick="show_up_3()">13203</div>
-                <a class="repeat-btn w-button"></a>
-                <a class="repeat-btn w-button"></a>
+            <div class="setting flex">
+                <div class="point flex" onclick="show_up_3()"></div>
+                <a class="repeat-btn btn"></a>
+                <a class="repeat-btn btn"></a>
             </div>
-            <div class="ety" onclick="show_up_1()">
+            <div class="ety flex" onclick="show_up_1()">
                 <div class="ety-text">J 治める　＞</div>
                 <div class="ety-text">27 命令・統治　＞</div>
                 <div class="ety-text">ban</div>
                 <div class="ety-text">禁止する</div>
             </div>
-            <div class="levels">
-                <div class="level">
+            <div class="levels flex">
+                <div class="level flex">
                     <div class="source">シス単</div>
                     <div class="level-num">1300</div>
                 </div>
-                <div class="level">
+                <div class="level flex">
                     <div class="source">東進</div>
                     <div class="level-num">13</div>
                 </div>
-                <div class="level">
+                <div class="level flex">
+                    <div class="source">東進上級</div>
+                    <div class="level-num">13</div>
+                </div>
+                <div class="level flex">
                     <div class="source">英検</div>
                     <div class="level-num">準2</div>
                 </div>
             </div>
-            <div class="answers">
+            <div class="history">
                 ○○○×××<br />
             </div>
-            <div class="answers">
+            <div class="history">
                 ○○○×××<br />
             </div>
         </div>
-        <div class="question">
-            <div class="eng">They abandoned the hill to enemy forces They abandoned the hill to enemy forces.</div>
-            <div class="eng">彼らはその丘を敵軍に明け渡した彼らはその丘を敵軍に________。</div>
+        <div class="question flex">
+            <div class="q_text">They abandoned the hill to enemy forces They abandoned the hill to enemy forces.</div>
+            <div class="q_text">彼らはその丘を敵軍に明け渡した彼らはその丘を敵軍に________。</div>
             <div>
                 <div class="input-text"></div>
-                <div class="keys">
-                    <a class="input-btn w-button"></a>
-                    <a class="input-btn w-button"></a>
-                    <a class="input-btn w-button"></a>
+                <div class="keys flex">
+                    <div class="w-input-btn flex">
+                        <div class="input-btn btn flex"></div>
+                    </div>
+                    <div class="w-input-btn flex">
+                        <div class="input-btn btn flex"></div>
+                    </div>
+                    <div class="w-input-btn flex">
+                        <div class="input-btn btn flex"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="select-bar move1">
-        <div class="back" onclick="go_out_1()">＜</div>
+
+
+
+    <div class="select-bar move1 flex">
+        <svg width="45" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" version="1.1" onclick="go_out_1()"
+            style="height: 100%;">
+            <line x1="230" y1="0" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+            <line x1="230" y1="100" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+        </svg>
         <div class="select-title">大ジャンル</div>
     </div>
     <div class="select move1">
         <table>
             <tbody>
-                <tr><td class="li-num">A</td><td class="li-name">環境</td></tr>
-                <tr><td class="li-num">B</td><td class="li-name">位置・方向・回転</td></tr>
-                <tr><td class="li-num">C</td><td class="li-name">心</td></tr>
-                <tr><td class="li-num">D</td><td class="li-name">時間</td></tr>
-                <tr><td class="li-num">E</td><td class="li-name">形</td></tr>
-                <tr><td class="li-num">F</td><td class="li-name">数</td></tr>
-                <tr><td class="li-num">G</td><td class="li-name">存在・もの</td></tr>
-                <tr><td class="li-num">H</td><td class="li-name">形容</td></tr>
-                <tr><td class="li-num">I</td><td class="li-name">関係</td></tr>
-                <tr><td class="li-num">J</td><td class="li-name">働きかける</td></tr>
-                <tr><td class="li-num">K</td><td class="li-name">作用</td></tr>
-                <tr><td class="li-num">L</td><td class="li-name">治める</td></tr>
-                <tr><td class="li-num">M</td><td class="li-name">信じる</td></tr>
-                <tr><td class="li-num">N</td><td class="li-name">移動</td></tr>
-                <tr><td class="li-num">O</td><td class="li-name">get・keep</td></tr>
-                <tr><td class="li-num">P</td><td class="li-name">見る・聞く</td></tr>
-                <tr><td class="li-num">Q</td><td class="li-name">編む</td></tr>
-                <tr><td class="li-num">R</td><td class="li-name">その他の行動</td></tr>
-                <tr><td class="li-num">S</td><td class="li-name">接尾辞</td></tr>
+                <tr>
+                    <td class="li-num">A</td>
+                    <td class="li-name">環境</td>
+                </tr>
+                <tr>
+                    <td class="li-num">B</td>
+                    <td class="li-name">位置・方向・回転</td>
+                </tr>
+                <tr>
+                    <td class="li-num">C</td>
+                    <td class="li-name">心</td>
+                </tr>
+                <tr>
+                    <td class="li-num">D</td>
+                    <td class="li-name">時間</td>
+                </tr>
+                <tr>
+                    <td class="li-num">E</td>
+                    <td class="li-name">形</td>
+                </tr>
+                <tr>
+                    <td class="li-num">F</td>
+                    <td class="li-name">数</td>
+                </tr>
+                <tr>
+                    <td class="li-num">G</td>
+                    <td class="li-name">存在・もの</td>
+                </tr>
+                <tr>
+                    <td class="li-num">H</td>
+                    <td class="li-name">形容</td>
+                </tr>
+                <tr>
+                    <td class="li-num">I</td>
+                    <td class="li-name">関係</td>
+                </tr>
+                <tr>
+                    <td class="li-num">J</td>
+                    <td class="li-name">働きかける</td>
+                </tr>
+                <tr>
+                    <td class="li-num">K</td>
+                    <td class="li-name">作用</td>
+                </tr>
+                <tr>
+                    <td class="li-num">L</td>
+                    <td class="li-name">治める</td>
+                </tr>
+                <tr>
+                    <td class="li-num">M</td>
+                    <td class="li-name">信じる</td>
+                </tr>
+                <tr>
+                    <td class="li-num">N</td>
+                    <td class="li-name">移動</td>
+                </tr>
+                <tr>
+                    <td class="li-num">O</td>
+                    <td class="li-name">get・keep</td>
+                </tr>
+                <tr>
+                    <td class="li-num">P</td>
+                    <td class="li-name">見る・聞く</td>
+                </tr>
+                <tr>
+                    <td class="li-num">Q</td>
+                    <td class="li-name">編む</td>
+                </tr>
+                <tr>
+                    <td class="li-num">R</td>
+                    <td class="li-name">その他の行動</td>
+                </tr>
+                <tr>
+                    <td class="li-num">S</td>
+                    <td class="li-name">接尾辞</td>
+                </tr>
             </tbody>
         </table>
     </div>
-    <div class="select-bar move2">
-        <div class="back" onclick="go_out_2('.move1', '.move2')">＜</div>
+    <div class="select-bar move2 flex">
+        <svg width="45" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            onclick="go_out_2('.move1', '.move2')" style="height: 100%;">
+            <line x1="230" y1="0" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+            <line x1="230" y1="100" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+        </svg>
         <div class="select-title">語源ジャンル</div>
     </div>
     <div class="select move2">
         <table>
             <tbody>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
             </tbody>
         </table>
     </div>
-    <div class="select-bar move3">
-        <div class="back" onclick="go_out_2('.move2', '.move3')">＜</div>
+    <div class="select-bar move3 flex">
+        <svg width="45" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            onclick="go_out_2('.move2', '.move3')" style="height: 100%;">
+            <line x1="230" y1="0" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+            <line x1="230" y1="100" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+        </svg>
         <div class="select-title">語源</div>
     </div>
     <div class="select move3">
         <table>
             <tbody>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
             </tbody>
         </table>
     </div>
-    <div class="select-bar move4">
-        <div class="back" onclick="go_out_2('.move3', '.move4')">＜</div>
+    <div class="select-bar move4 flex">
+        <svg width="45" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            onclick="go_out_2('.move3', '.move4')" style="height: 100%;">
+            <line x1="230" y1="0" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+            <line x1="230" y1="100" x2="150" y2="50" stroke="white" stroke-width="14" stroke-linecap="round"></line>
+        </svg>
         <div class="select-title">単語</div>
     </div>
     <div class="select move4">
         <table>
             <tbody>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
-                <tr><td class="li-name">位置・方向</td></tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
+                <tr>
+                    <td class="li-name">位置・方向</td>
+                </tr>
             </tbody>
         </table>
     </div>
-    <div class="select-bar move5">
-        <div class="back" onclick="go_out_3()">
-            <strong>∨</strong>
-        </div>
+
+
+
+    <div class="select-bar move5 flex">
+        <svg width="45" viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" version="1.1" onclick="go_out_3()"
+            style="height: 100%;">
+            <line x1="190" y1="0" x2="260" y2="100" stroke="white" stroke-width="20" stroke-linecap="round"></line>
+            <line x1="330" y1="0" x2="260" y2="100" stroke="white" stroke-width="20" stroke-linecap="round"></line>
+        </svg>
         <div class="select-title">JR最長片道切符の旅</div>
     </div>
-    <div class="select move5"></div>
+    <div class="select move5" style="overflow: hidden;">
+        <div class="trip">
+            <div class="data flex">
+                <div style="height: 4vh;font-weight: bold;" class="flex" id="fromst"></div>
+                <div class="data2 flex">
+                    <div class="data3-1 flex" onclick="alert(alertstr[0])">
+                        <span id="st1"></span>
+                        <span style="font-size: 13px;" id="st1kana"></span>
+                        <svg width="26" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <circle fill="#fff" stroke="#000" stroke-width="15" cx="50" cy="50" r="42.5"></circle>
+                        </svg>
+                    </div>
+                    <div class="data3-2 flex">
+                        <div class="flex" id="wayname"></div>
+                        <div class="flex" id="between"></div>
+                        <svg width="20" viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <line x1="0" y1="0" x2="80" y2="50" stroke="black" stroke-width="14"></line>
+                            <line x1="0" y1="100" x2="80" y2="50" stroke="black" stroke-width="14"></line>
+                        </svg>
+                    </div>
+                    <div class="data3-1 flex" onclick="alert(alertstr[1])">
+                        <span id="st2"></span>
+                        <span style="font-size: 13px;" id="st2kana"></span>
+                        <svg width="26" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <circle fill="#fff" stroke="#000" stroke-width="15" cx="50" cy="50" r="42.5"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div style="width: 100%;height: 3vh;margin-top: 1.2vh;border-top: 1vh solid #000;"></div>
+            </div>
+            <div id="map" style="width: 100%; height: 70vh; background-color: #fff;"></div>
+        </div>
+    </div>
+    <div id="alert" class="alert">
+        <div onclick="document.getElementById('alert').style = 'visibility: visible;'"></div>
+        <div class="twitter">
+            <a href="https://twitter.com/intent/tweet?text=test">
+                <img src="twitter.png" style="height: 3vh;">
+            </a>
+        </div>
+        <div class="share" onclick="shareClick()">
+            <a href="#">
+                <img src="share.png" style="height: 4vh;">
+            </a>
+        </div>
+    </div>
+    <div id="loading" class="loading">Now Loading...</div>
+    <div id="judge" class="judge flex">
+        <svg id="svg8" version="1.1" y="-250" x="-250" viewBox="-250 -250 500 500" height="80" width="80"
+            style="overflow:visible" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <g style="fill:#ffffff;stroke-linejoin:round" id="g6">
+                <path
+                    style="fill:none;stroke:#ff0000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+                    id="path4"
+                    d="M 195,0 A 195,195 0 0 1 0,195 195,195 0 0 1 -195,0 195,195 0 0 1 0,-195 195,195 0 0 1 195,0 Z" />
+            </g>
+        </svg>
+        <div>abandoned</div>
+        <div>引き渡した</div>
+    </div>
 </body>
 
 </html>
